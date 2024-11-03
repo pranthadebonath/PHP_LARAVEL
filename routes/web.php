@@ -12,7 +12,7 @@ Route::get('/about-us', function () {
 
 Route::get('/post', function () {
     return view('post');
-});
+}); 
 Route::get('/test', function () {
     return view('post');
 });

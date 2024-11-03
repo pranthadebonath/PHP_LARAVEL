@@ -1,7 +1,24 @@
 @php
     $users = ["Prantha Debonath","Jyotirmay","Shahid kapoor","Nirob Kumar","Dipu kumar","Hridoy Borman"];
-    $dept = "CSE";
+    $dept = ["CSE","EEE","ME","FE","CE","TE"];
+    $val=true;
 @endphp
+@include('pages.header',['names'=> $dept])
+
+@includeIf('pages.something')
+{{-- This includeif check first the path, is there any file exist on this path.
+if exist then include it, otherwise not--}}
+
+@includeWhen($val,'about')
+{{-- This includeWhen check first the condition, is there have true value then 
+include it, otherwise not--}}
+<br>
+<br>
+@includeUnless(false,'post' )
+{{-- This includeUnless check first the condition, is there have false value then 
+include it, otherwise not--}}
+<br>
+<br>
 <ul>
 @foreach ($users as $user)
    <li>{{$loop->index}}-{{$user}}</li> 
@@ -41,3 +58,6 @@
   @endif
 @endforeach
 </ul>
+
+<br>
+@include('pages.footer',['names'=> $users])
