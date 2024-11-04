@@ -14,7 +14,7 @@ if exist then include it, otherwise not--}}
 include it, otherwise not--}}
 <br>
 <br>
-@includeUnless(false,'post' )
+@includeUnless(empty($dept),'post' )
 {{-- This includeUnless check first the condition, is there have false value then 
 include it, otherwise not--}}
 <br>

@@ -13,6 +13,12 @@ Route::get('/about-us', function () {
 Route::get('/post', function () {
     return view('post');
 }); 
+Route::get('/simple_page', function () {
+    return view('simple_page');
+}); 
+Route::get('/contact', function () {
+    return view('contact');
+}); 
 Route::get('/test', function () {
     return view('post');
 });
