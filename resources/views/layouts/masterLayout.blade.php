@@ -34,15 +34,19 @@
         </main>
 
         <!-- Sidebar (Fixed) -->
-        <aside class="sidebar">
+       
+         <aside class="sidebar">
             <h2>Sidebar</h2>
+            @section('sidebar')
             <ul>
                 <li><a href="#">Latest Posts</a></li>
                 <li><a href="#">Categories</a></li>
-                <li><a href="#">Archives</a></li>
+                <li><a href="#">Archives</a> </li>
                 <li><a href="#">Popular Tags</a></li>
             </ul>
-        </aside>
+            @show
+         </aside>
+        
     </div>
 
     <footer class="footer">
