@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+/* Header Styling */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #4CAF50;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    padding-top: 20px;
+}
+
+/* Main Content Styling (Fixed) */
+.main-content {
+    position: fixed;
+    left: 0;
+    top: 140px; /* Adjust based on header + navbar height */
+    width: 75%;
+    height: calc(100vh - 140px); /* Full height minus header and navbar */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable vertical scrolling within main content */
+}
+
+.scrollable-content {
+    padding-right: 10px; /* Add padding to avoid scrollbar overlap */
+}
+
+/* Sidebar Styling (Fixed) */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 140px; /* Align with header and navbar height */
+    width: 20%;
+    height: calc(100vh - 140px); /* Full height minus header and navbar */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable vertical scrolling in sidebar */
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .main-content, .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+}
