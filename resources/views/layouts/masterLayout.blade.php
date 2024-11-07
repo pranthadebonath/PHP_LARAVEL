@@ -52,5 +52,8 @@
     <footer class="footer">
         <p>&copy; 2024 LARAVEL Help LTD. . All rights reserved.</p>
     </footer>
+
+
+    @stack('scripts')
 </body>
 </html>
